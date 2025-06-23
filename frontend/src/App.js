@@ -8,7 +8,7 @@ function App() {
   const menuData = {
     sandwichs: {
       title: 'Sandwichs',
-      subtitle: '(pain ou galette)',
+      subtitle: 'Viandes Fraîches - Escalope de poulet, Cordon bleu, Steak haché, Merguez, Kebab, Tenders - Pain ou Galette, Viande au choix, sauce au choix, salade, tomates, oignons',
       items: [
         { name: 'Sandwich seul', price: '6.00€' },
         { name: 'Menu sandwich', price: '8.00€' }
@@ -16,56 +16,101 @@ function App() {
     },
     burgers: {
       title: 'Burgers',
-      subtitle: 'Nos spécialités',
+      subtitle: 'Classique - Steak haché, sauce au choix, salade, tomates, oignons, cheddar',
       items: [
-        { name: 'Cheeseburger', price: '5.50€' },
-        { name: 'Chicken Burger', price: '5.50€' },
-        { name: 'Double Steak', price: '6.00€' },
-        { name: 'MB Spécial', price: '6.50€', description: 'sauce fromagère maison' }
+        { name: 'Classique', price: '4.50€', menu: '6.50€' },
+        { name: 'Chicken - Escalope de poulet pour maison, sauce au choix, tomates, cheddar', price: '5.50€', menu: '7.50€' },
+        { name: 'MB Burger - Steak haché, sauce au choix, cordon, ratatouille, oignons', price: '6.50€', menu: '8.50€' }
       ]
     },
     tacos: {
       title: 'Tacos',
-      subtitle: 'Authentiques & Savoureux',
+      subtitle: 'Viandes Fraîches - Escalope de poulet, Cordon bleu, Steak haché, Nuggets, Kebab, Tenders',
       items: [
-        { name: 'Tacos simple', price: '5.50€' },
-        { name: 'Tacos fromage', price: '6.00€' },
-        { name: 'Tacos 2 viandes', price: '7.00€' },
-        { name: 'Tacos gratiné', price: '8.00€' }
+        { name: 'Taco M - 1 Viande au choix, Sauce au choix, Sauce Fromagère, Frites', price: '5.00€', menu: '8.00€' },
+        { name: 'Taille L - 2 Viandes au choix, Sauce au choix, Sauce Fromagère, Frites', price: '7.50€', menu: '9.50€' },
+        { name: 'Taille XL - 3 Viandes au choix, Sauce au choix, Sauce Fromagère, Frites', price: '8.50€', menu: '10.50€' },
+        { name: 'MB Gold - 1 viande au choix, Sauce au choix, Sauce Fromagère, Frites', price: '6.00€', menu: '8.00€' }
       ]
     },
     paninis: {
       title: 'Paninis',
-      subtitle: 'Croustillants',
+      subtitle: '',
       items: [
-        { name: 'Panini 3 fromages', price: '5.00€' },
-        { name: 'Panini tenders', price: '5.50€' },
-        { name: 'Panini escalope', price: '5.50€' },
-        { name: 'Panini steak haché', price: '5.50€' }
+        { name: '3 Fromages - Chèvre, Mozzarella, Emmental', price: '4.50€', menu: '6.50€' },
+        { name: 'L\'Italien - Tomates, Mozzarella, Pesto', price: '4.50€', menu: '6.50€' },
+        { name: 'Chicken - Poulet, Mozzarella, Tomates', price: '4.50€', menu: '6.50€' }
+      ]
+    },
+    mbkids: {
+      title: 'MB Kids',
+      subtitle: 'Menu',
+      items: [
+        { name: '1 Cheese Burger ou 4 Nuggets, Frites, Capri Sun, Compote, Surprise', price: '5.00€' }
       ]
     },
     assiettes: {
       title: 'Assiettes',
-      subtitle: 'Complètes & Généreuses',
+      subtitle: 'Complètes Fraîches - Escalope de poulet pour maison, Steak haché, Merguez, Kebab, Tenders - Roquettes, Tomate, Feta/Chèvre, Betterave',
       items: [
-        { name: 'Assiette kebab', price: '10.00€' },
-        { name: 'Assiette tenders', price: '10.00€' },
-        { name: 'Assiette escalope', price: '10.00€' },
-        { name: 'Assiette merguez', price: '10.00€' },
-        { name: 'Assiette steak haché œuf', price: '10.00€' },
-        { name: 'Assiette mixte (2 viandes)', price: '13.00€' }
+        { name: 'Viande au choix, Sauce au choix, Frites Fraîches maison, Salade, Tomates', price: '8.00€' },
+        { name: '2 Viandes au choix, Sauce au choix, Frites Fraîches maison, Salade, Tomates', price: '15.00€' }
       ]
     },
-    sides: {
+    petitesfaims: {
       title: 'Petites Faims',
-      subtitle: 'Pour accompagner',
+      subtitle: '',
       items: [
-        { name: 'Nuggets x6', price: '4.00€' },
-        { name: 'Tenders x3', price: '4.00€' },
-        { name: 'Wings x6', price: '4.00€' },
-        { name: 'Croquettes fromage x6', price: '3.50€' },
-        { name: 'Frites maison', price: '3.00€' },
-        { name: 'Potatoes', price: '3.00€' }
+        { name: 'Cheese Burger', price: '3.50€' },
+        { name: 'Frite wings chevre ou poulet', price: '3.50€' },
+        { name: 'Mexi poules X 4', price: '3.50€' },
+        { name: 'Tenders Croquettes X 4', price: '3.50€' },
+        { name: 'Stick Mozza X 4', price: '3.50€' },
+        { name: 'Oignons Rings X 4', price: '3.00€' },
+        { name: 'Frites Fraîches maison', price: '3.00€' },
+        { name: 'Nuggets', price: '4.00€' },
+        { name: 'Samoussa', price: '4.00€' }
+      ]
+    },
+    supplements: {
+      title: 'Suppléments',
+      subtitle: 'Suppléments - Cheddar, Sauce cheddar, Sauce Fromagère, Crispy Oignons, Fromage raclé, œuf, oignons cru, oignons cuit',
+      items: [
+        { name: 'Supplément au choix', price: '0.50€' }
+      ]
+    },
+    sauces: {
+      title: 'Sauces',
+      subtitle: 'Ketchup, Mayonnaise, Moutarde, Algérienne, Burger, Kraal, Barbecue, Poivre, Sauce blanche, Harissa, Samourai, Andalouse',
+      items: [
+        { name: 'Sauce au choix', price: 'Incluse' }
+      ]
+    },
+    desserts: {
+      title: 'Desserts',
+      subtitle: '',
+      items: [
+        { name: 'Tarte au daim', price: '2.50€' },
+        { name: 'Tiramisu', price: '3.00€' },
+        { name: 'Tarte de jour', price: '3.50€' },
+        { name: 'Donuts', price: '1.50€' }
+      ]
+    },
+    boissons: {
+      title: 'Boissons',
+      subtitle: '',
+      items: [
+        { name: 'Bouteille d\'eau', price: '1.00€' },
+        { name: 'Canette de Soda', price: '1.00€' },
+        { name: 'Jus Rio', price: '0.60€' },
+        { name: 'Capri Sun', price: '1.50€' },
+        { name: 'Bouteille de verre', price: '1.50€' },
+        { name: 'Bouteille Nestea', price: '1.50€' },
+        { name: 'Grande Bouteille', price: '3.00€' },
+        { name: 'Redbull', price: '2.00€' },
+        { name: 'Jus Wow', price: '2.00€' },
+        { name: 'Monster', price: '2.00€' },
+        { name: 'Café', price: '1.00€' }
       ]
     }
   };
