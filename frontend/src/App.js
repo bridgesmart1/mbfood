@@ -266,18 +266,34 @@ function App() {
           </div>
 
           {/* Menu Items */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {menuData[activeCategory].items.map((item, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-orange-500/20 hover:border-orange-500/40 transition-all hover:transform hover:scale-105">
-                <div className="flex justify-between items-start mb-2">
-                  <h3 className="text-lg font-semibold text-white">{item.name}</h3>
-                  <span className="text-xl font-bold text-orange-400">{item.price}</span>
+          <div className="mb-8">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-white mb-2">{menuData[activeCategory].title}</h3>
+              {menuData[activeCategory].subtitle && (
+                <p className="text-orange-300 text-sm italic max-w-4xl mx-auto">
+                  {menuData[activeCategory].subtitle}
+                </p>
+              )}
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {menuData[activeCategory].items.map((item, index) => (
+                <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-orange-500/20 hover:border-orange-500/40 transition-all hover:transform hover:scale-105">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="text-lg font-semibold text-white flex-1">{item.name}</h3>
+                    <div className="text-right ml-4">
+                      <span className="text-xl font-bold text-orange-400">{item.price}</span>
+                      {item.menu && (
+                        <div className="text-sm text-orange-300">Menu: {item.menu}</div>
+                      )}
+                    </div>
+                  </div>
+                  {item.description && (
+                    <p className="text-sm text-orange-300 italic">{item.description}</p>
+                  )}
                 </div>
-                {item.description && (
-                  <p className="text-sm text-orange-300 italic">{item.description}</p>
-                )}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
 
           <div className="text-center mt-12">
